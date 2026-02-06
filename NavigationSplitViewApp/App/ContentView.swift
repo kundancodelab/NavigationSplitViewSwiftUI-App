@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var viewModel = NavigationSplitViewModel()
+    
     var body: some View {
         NavigationSplitView {
             // ═══════════════════════════════════════════════
@@ -17,18 +18,16 @@ struct ContentView: View {
             SideBarView(viewModel: viewModel)
         } content: {
             // ═══════════════════════════════════════════════
-            // COLUMN 2: Subs MENU
+            // COLUMN 2: SUBMENU
             // ═══════════════════════════════════════════════
             SubMenuView(viewModel: viewModel)
-        }
-        
-        detail: {
+        } detail: {
             // ═══════════════════════════════════════════════
-            // COLUMN 3: DETAIL VIEW (Default = WelcomeScreen or Home screen)
+            // COLUMN 3: DETAIL VIEW
             // ═══════════════════════════════════════════════
-           NavigationDetailView(viewModel: viewModel)
+            // Default view when no engineer is selected
+            NavigationDetailView(viewModel: viewModel)
         }
-
     }
 }
 

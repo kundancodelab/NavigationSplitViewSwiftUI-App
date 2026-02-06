@@ -8,36 +8,31 @@
 import Foundation
 
 @Observable
-class NavigationSplitViewModel  {
-    var selectedMessage: Message?
+class NavigationSplitViewModel {
+    var selectedCountry: Country?
     var selectedITEngineer: ITEgineers?
-    var messages: [Message] = [
-        Message(message: "iOS Developer" ,name:"Kundan Kumar"),
-        Message(message: "Senior Andoroid Developer" ,name: "Anit"),
-        Message(message: "Full stack developer" ,name: "Tanushri"),
-        Message(message: "Backend developer" ,name: "Sumit Goswami")
-        ]
     
-    var allITEngineers: [ITEgineers] = [
-        ITEgineers(id: 1, name: "Kundan Kumar" , designation: "Jr. iOS Developer"),
-        ITEgineers(id: 2, name: "Anit" ,designation: "Sr. Android Developer"),
-        ITEgineers(id: 3, name: "Tanushri",designation: "Full Stack Developer"),
-        ITEgineers(id: 4, name: "Sumit Goswami" , designation: "Backend Developer")
-    ]
+    var allITEngineers: [ITEgineers] = MockdataBuilder.getMockITEngineers()
+
+    var allCountriesList: [Country] = MockdataBuilder.getMockCountries()
+    
+    
+   
    
 }
 
 
 
-struct Message : Identifiable , Hashable {
+struct Country : Identifiable , Hashable {
     var id = UUID()
     let message:String
     let name:String
-    
-    init(id: UUID = UUID(), message: String, name: String) {
+    var allExpertEngineers: [ITEgineers] = []
+    init(id: UUID = UUID(), message: String, name: String , allExpertEngineers: [ITEgineers] = []) {
         self.id = id
         self.message = message
         self.name = name
+        self.allExpertEngineers = allExpertEngineers
     }
 }
 
@@ -45,10 +40,34 @@ struct Message : Identifiable , Hashable {
 struct ITEgineers: Identifiable , Hashable {
     var id: Int
     var name: String
+    let country:String
     var designation: String
-    init(id: Int, name: String, designation: String) {
+    init(id: Int, name: String, country:String ,designation: String) {
         self.id = id
         self.name = name
         self.designation = designation
+        self.country = country
+    }
+}
+
+
+class MockdataBuilder {
+    
+    static func getMockITEngineers() -> [ITEgineers] {
+        [
+            ITEgineers(id: 1, name: "Kundan Kumar", country: "USA", designation: "Jr. iOS Developer"),
+            ITEgineers(id: 2, name: "Anit", country: "UK", designation: "Sr. Android Developer"),
+            ITEgineers(id: 3, name: "Tanushri", country: "INDIA", designation: "Full Stack Developer"),
+            ITEgineers(id: 4, name: "Sumit Goswami", country: "France", designation: "Backend Developer")
+        ]
+    }
+    
+    static func getMockCountries() -> [Country] {
+        [
+            Country(message: "Expert Programmers", name:"USA", allExpertEngineers: getMockITEngineers()),
+            Country(message: "Expert Software Engineers", name:"UK", allExpertEngineers: getMockITEngineers()),
+            Country(message: "Expert Web Developers", name:"France", allExpertEngineers: getMockITEngineers()),
+            Country(message: "Expert Backend Engineers", name:"India", allExpertEngineers: getMockITEngineers())
+        ]
     }
 }

@@ -12,11 +12,23 @@ struct NavigationDetailView: View {
     
     var body: some View {
         VStack {
-            if let  selectedItem = viewModel.selectedMessage {
-                Text(selectedItem.message)
-                    .font(Font.largeTitle.bold())
+            if let  selectedItem = viewModel.selectedITEngineer {
+                VStack(alignment: .leading) {
+                    Group {
+                        Text(selectedItem.name)
+                            .font(Font.largeTitle.bold())
+                        Text(selectedItem.country)
+                            .font(Font.largeTitle.bold())
+                        Text(selectedItem.designation)
+                            .font(Font.largeTitle.bold())
+                    }.padding(.all, 16)
+                    
+                
+                    Spacer()
+                }
+               
             } else {
-                ContentUnavailableView("No Message Selected", systemImage: "exclamationmark.bubble", description:Text("Under Maintenance. \n Please try again later."))
+                ContentUnavailableView("No developer record found", systemImage: "wrench.and.screwdriver", description:Text("Under Maintenance. \n Please try again later."))
             }
          
              

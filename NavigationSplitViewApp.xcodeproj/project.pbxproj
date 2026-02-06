@@ -11,7 +11,7 @@
 		B5BE7B4E2F34BF5500ABFC11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B452F34BF5500ABFC11 /* ContentView.swift */; };
 		B5BE7B4F2F34BF5500ABFC11 /* NavigationSplitViewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B462F34BF5500ABFC11 /* NavigationSplitViewAppApp.swift */; };
 		B5BE7B502F34BF5500ABFC11 /* NavigationSplitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B482F34BF5500ABFC11 /* NavigationSplitViewModel.swift */; };
-		B5BE7B512F34BF5500ABFC11 /* SideBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B492F34BF5500ABFC11 /* SideBarContentView.swift */; };
+		B5BE7B512F34BF5500ABFC11 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B492F34BF5500ABFC11 /* SideBarView.swift */; };
 		B5BE7B532F34BFCD00ABFC11 /* NavigationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B522F34BFCD00ABFC11 /* NavigationDetailView.swift */; };
 		B5BE7B562F34F4FA00ABFC11 /* SubMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE7B552F34F4FA00ABFC11 /* SubMenuView.swift */; };
 /* End PBXBuildFile section */
@@ -21,7 +21,7 @@
 		B5BE7B452F34BF5500ABFC11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5BE7B462F34BF5500ABFC11 /* NavigationSplitViewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewAppApp.swift; sourceTree = "<group>"; };
 		B5BE7B482F34BF5500ABFC11 /* NavigationSplitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewModel.swift; sourceTree = "<group>"; };
-		B5BE7B492F34BF5500ABFC11 /* SideBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarContentView.swift; sourceTree = "<group>"; };
+		B5BE7B492F34BF5500ABFC11 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		B5BE7B4B2F34BF5500ABFC11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5BE7B522F34BFCD00ABFC11 /* NavigationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetailView.swift; sourceTree = "<group>"; };
 		B5BE7B552F34F4FA00ABFC11 /* SubMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuView.swift; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				B5BE7B542F34C40300ABFC11 /* NavViewModel */,
-				B5BE7B492F34BF5500ABFC11 /* SideBarContentView.swift */,
-				B5BE7B522F34BFCD00ABFC11 /* NavigationDetailView.swift */,
+				B5BE7B492F34BF5500ABFC11 /* SideBarView.swift */,
 				B5BE7B552F34F4FA00ABFC11 /* SubMenuView.swift */,
+				B5BE7B522F34BFCD00ABFC11 /* NavigationDetailView.swift */,
 			);
 			path = NavigationSplitRotuer;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 				B5BE7B4E2F34BF5500ABFC11 /* ContentView.swift in Sources */,
 				B5BE7B4F2F34BF5500ABFC11 /* NavigationSplitViewAppApp.swift in Sources */,
 				B5BE7B502F34BF5500ABFC11 /* NavigationSplitViewModel.swift in Sources */,
-				B5BE7B512F34BF5500ABFC11 /* SideBarContentView.swift in Sources */,
+				B5BE7B512F34BF5500ABFC11 /* SideBarView.swift in Sources */,
 				B5BE7B532F34BFCD00ABFC11 /* NavigationDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
